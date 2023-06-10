@@ -1,0 +1,43 @@
+/* Add google font */
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+
+/* All class using same variable */
+:root{
+    /* Define variables */
+    --dark60 : rgba(240, 230, 234, 0.6);
+    --Light : #51536A;
+}
+
+/* All Section */
+*{
+    /* Clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* Gradient Shade of Color */
+    /* background-image: url('./images/backgroud.jpg'); */
+    background: linear-gradient(var(--dark60),var(--dark60)),url(./images/backgroud.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a, botton, p{
+    font-family: 'Miriam Libre', sans-serif;
+    color: var(--Light);
+}
+
+a, botton, .logo{
+    /* Link Element Logo & Button --> Hand Cursor */
+    cursor: pointer;
+}
+
+main{
+    height: 100;
+    /* Work on grid */
+    display: grid; 
+    grid-template-columns: minmax(60px, 1fr) repeat(6,minmax(50px, 190px)) minmax(60px, 1fr);
+}
