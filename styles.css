@@ -4,8 +4,11 @@
 /* All class using same variable */
 :root{
     /* Define variables */
-    --dark60 : rgba(240, 230, 234, 0.6);
+    --dark60 : rgba(240, 230, 234, 0.6); /*0.6 = 60%*/
     --Light : #51536A;
+    --transition : all 0.3s ease 0s; /* Define delay time*/
+    --accent:#c9cbe3; /*Button color from figma*/
+    --accentHover :#a7adee; /*Mouse Hover -> Light */
 }
 
 /* All Section */
@@ -39,5 +42,47 @@ main{
     height: 100;
     /* Work on grid */
     display: grid; 
+    /* minmax ทำหน้าที่เป็น default เริ่มต้นขนาดของคอลัมน์ที่เท่าไรและกว้างได้มากสุดเท่าไร ยกตัวอย่างจากด้านล่าง
+    คอลัมน์แรกกว้างเริ่มต้นที่ 60px จากความกว้างของพื้นที่ทั้งหมด แล้วค่อยแบ่งเป็นพื้นที่เต็มๆของพื้นที่ทั้งหมด
+    คอลัมน์ที่สองแบ่งเป็น 6 elements ด้วยควากว้างเริ่มต้นที่ 50px และกว้างสูงสุด 190px 
+    คอลัมน์ที่สามแบ่งเริ่มต้นที่กว้าง 60px แล้วกว้างได้มากสุดของกว้างทั้งหมด */
     grid-template-columns: minmax(60px, 1fr) repeat(6,minmax(50px, 190px)) minmax(60px, 1fr);
+}
+
+header{
+    /* header start 2nd column to last column */
+    grid-column: 1/ span 7;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+nav img{
+    margin-top: auto;
+    width: auto;
+}
+
+/* Class */
+.Links{
+    margin-left: auto;
+}
+
+.Links a,.Links button{
+    font-size: 1.5 rem;
+    font-weight: 400;
+    transition: var(--transition);
+    /* Action */
+}
+
+.Links a{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.Links a:hover{
+    /* Color will change on cursor point at item */
+    color: var(--accentHover);
 }
