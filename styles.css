@@ -86,3 +86,136 @@ nav img{
     /* Color will change on cursor point at item */
     color: var(--accentHover);
 }
+
+.button_login{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+
+.button_login:hover{
+    color: var(--accentHover);
+}
+
+.info{
+    grid-column: 3 / span 4;
+    margin-top: 23%;
+    text-align: center;
+}
+
+.content_font1{
+    font-family: 'Miriam Libre', sans-serif;
+    color: var(--Light);
+    font-size: 2.5rem;
+}
+
+.content_font2{
+    font-family: 'Miriam Libre', sans-serif;
+    color: var(--Light);
+    font-size: 1.5rem;
+}
+
+.icons{
+    margin-top: 10%;
+    display: flex;
+}
+
+.icon{
+    margin-right: 40px;
+}
+
+.icon img{
+    width: 70px;
+    height: 70px;
+}
+
+.icon_info{
+    text-align: center;
+}
+
+.features{
+    grid-column: 2 / span 6;
+    background-color: #51536A;
+    margin-top: 6%;
+    /* top right bottom left */
+    padding: 20px 0px 0px 20px;
+    display: flex;
+    align-items: flex;
+}
+
+.Feature{
+    display: flex;
+    /* top right bottom left */
+    margin: 0px 10px 30px 10px;
+}
+
+.feature img{
+    width: 130px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.Feature p{
+    color: #fff;
+    margin-left: 5%;
+}
+
+.features_info p{
+    font-size: larger;
+}
+
+.Feature_top, .Feature_more{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;  
+}
+
+.Feature_bottom{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.Feature:nth-child(3){
+    align-self: flex-start;
+}
+
+.Feature_more{
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Feature_more:hover{
+    color: var(--accent);
+}
+
+/* Responsive website on my devices */
+@media only screen and (max-width: 1100px){
+    .icon img{
+        height: 60px;
+        width: auto;
+    }    
+    .content_font1 , .content_font2{
+        font-size: 2.75rem;
+    }
+    .feature{
+        grid-column: 1 / span 7;
+    }
+};
+
+@media only screen and (max-width:850px){
+    .info{
+        grid-column: 2 / span 7;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .content_font1, .content_font2{
+        font-size: 1.75rem;
+    }
+    .features{
+        flex-direction: column;
+    }
+}
+    
